@@ -1,0 +1,160 @@
+/*
+Author: Aline Ferreira
+14.Aug.2017
+*/
+
+//Color Schema
+@import 'color';
+
+//Fonts
+@import 'fonts';
+
+// Presets
+@import 'mainAdmin';
+
+// General
+@import 'custom';
+
+#carousel-solec {
+    height: 400px;
+    background-color: $carousel_back;
+    position: relative;
+
+    @media(max-width: 767px) {
+        height: 250px;
+        margin-top: 55px;
+    }
+
+    .box-novoBanner {
+        width: 290px;
+        margin: auto;     
+        height: 100%;   
+        display: flex;
+        align-items: center;
+
+        a {
+            width: 100%;
+            font-size: 20px;
+            color: $pure_white;
+            display: block;
+            border: 1px solid $pure_white;
+            padding: 8px 15px;
+            text-align: center;
+        }
+    }
+
+    .carousel-inner {
+        .item {
+            img {
+                width: auto;
+                height: 400px;
+                object-fit: cover;
+                margin: 0 auto;
+
+                @media(max-width: 767px) {
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+	a.carousel-control {
+	    background-image: none;
+		top: 60px;
+		bottom: 60px;
+	}
+}
+
+.box-btn {
+	position: absolute;
+	z-index: 2;
+	right: 15px;
+	top: 15px;
+
+	.btn-banner {  
+		display: inline-block;  	
+		margin: 5px;
+    }
+}
+
+#produtos {
+    padding: 60px 0;
+
+    .header-prods {
+        margin-bottom: 20px;
+
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+
+            a {
+                padding: 6px 10px;
+                color: $pure_white;
+                position: absolute;
+                top: 0;
+                right: 5px;
+                
+
+                &:hover, &:focus {
+                    text-decoration: none;
+                }                
+            }
+        }
+
+        span {
+            display: block;
+            width: 34px;
+            height: 1px;
+            margin: 0 auto;
+            background-color: $main_color;
+        }
+    }
+
+    .box-prod {         
+        position: relative;
+        margin-bottom: 20px;
+
+        figure {
+            overflow: hidden;
+            position: relative;
+            height: 200px;
+
+            img {
+                -webkit-transition: all 0.2s ease-in-out;
+                -moz-transition: all 0.2s ease-in-out;
+                -ms-transition: all 0.2s ease-in-out;
+                -o-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .box-prod_body {
+            padding: 15px;
+            position: relative;
+            min-height: 140px;
+
+            p {
+                line-height: 1.6;                    
+            }
+        }        
+    }
+    .btn-novoDestaque {
+        display: block;
+        width: 80%;
+        padding: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 15px auto;
+        color: $pure_white;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+
+
+

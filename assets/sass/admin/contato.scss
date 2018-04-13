@@ -1,0 +1,23 @@
+/*
+Author: Aline Ferreira
+14.Aug.2017
+*/
+
+//Color Schema
+@import 'color';
+
+//Fonts
+@import 'fonts';
+
+// Presets
+@import 'mainAdmin';
+
+// General
+@import 'custom';
+
+
+#contato {
+	.alert-success, .alert-danger {
+		display: none;
+	}
+}

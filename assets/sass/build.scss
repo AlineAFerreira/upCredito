@@ -1,0 +1,44 @@
+/*===========================================*/
+/* This is the file with product style
+/* Theme Author: Aline Ferreira
+/* Version: 1.0
+==============================================*/
+
+//Color Schema
+@import 'color';
+
+//Fonts
+@import 'fonts';
+
+// Pre-sets
+@import 'main';
+
+//Header
+@import 'header';
+
+#build{
+/*    background: url('../img/projects.jpg') no-repeat center bottom fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative; 
+    padding: 50px 0;
+    height: 100vh;
+    
+    .mask {
+        background: url('../img/dots.png') repeat;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    } 
+
+    .heading h1{
+        color: $pure_white;
+    } */
+}
+
+//Footer
+@import 'footer';

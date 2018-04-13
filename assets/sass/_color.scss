@@ -1,0 +1,29 @@
+
+// This is the file with the colors variables
+// Theme Author: Aline Ferreira
+// Version: 1.0
+
+
+$main_color:   #F0242C !default;
+$text_color:   #787878 !default;
+$pure_black:   #000000 !default;
+$pure_white:   #FFFFFF !default;
+$pure_ice:     darken($pure_white, 5%) !default;
+$space_gray:   #666666 !default;
+$medium_gray:  lighten($space_gray, 24%);
+$lighter_gray: #E4E4E4;
+$alert-red:    #EA4335;
+
+
+
+
+
+// Carousel settings
+
+$carousel_back: #222222;
+
+
+// Admin
+
+$border_color: #c8c8c8;
+

@@ -1,0 +1,206 @@
+
+// This is the Admin Main Stylesheet
+// Theme Author: Aline Ferreira
+// Version: 1.0
+
+//CSS Style Structure
+
+// General
+// Helper Classes
+// Page title 
+
+
+/*********************************
+* General 
+**********************************/
+
+#app {
+    display: -webkit-flex;
+    display: flex;
+}
+
+
+/*********************************
+* HELPER CLASSES 
+**********************************/
+
+.ellipsis {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   -ms-text-overflow: ellipsis;
+   white-space: nowrap;
+   cursor: default;
+}
+
+.text-alert, label.error {
+    color: $alert-red;
+}
+
+.text-success {
+    color: #2ad050!important;
+}
+
+.top_space10 {
+    margin-top: 10px !important;
+}
+
+.top_space15 {
+    margin-top: 15px !important;
+}
+
+.top_space20 {
+    margin-top: 20px !important;
+}
+
+.top_space30 {
+    margin-top: 30px !important;
+}
+
+.bottom_space30 {
+    margin-bottom: 30px !important;
+}
+
+.left_space10 {
+    margin-left: 10px !important;
+}
+
+/*********************************
+* PAGE TITLE HEADERS
+**********************************/
+
+.heading, .heading2 {
+    span {
+        font-weight: bold;
+        font-size: 13px;
+        font-family: $snd_font;
+        display: block;
+        color: rgba($main_color, .7);
+        text-transform: uppercase;
+        letter-spacing: -0.2px;
+    }
+
+    h1 {        
+        font-size: 30px;
+        text-transform: uppercase;        
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    h1, h2 {
+        margin-top: 0;
+        padding-bottom: 10px;
+        position: relative;
+        letter-spacing: -1px;
+        font-weight: 900;
+        color: $space_gray;        
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 34px;
+            height: 1px;
+            left: 0;
+            bottom: 0;
+            background-color: $main_color;
+        }
+    }
+    
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.box-shadow {
+    border: 1px solid #D4DEE5;
+    box-shadow: 0 0 6px 2px rgba(#D4DEE5, 0.4);
+}
+
+h3 {
+    .btn-action {
+        position: absolute;
+        top: -3px;
+        right: 5px;
+    }
+}
+
+.modalAlert {
+
+    &.in {
+        display: flex !important;
+        align-items: center;
+
+        .modal-content {
+            opacity: 1;
+        }
+    }
+
+    .modal-content {
+        opacity: 0;
+
+        .modal-body {
+            text-align: center;
+            padding: 50px;    
+
+            p.text {
+                font-size: 22px;
+                margin-bottom: 30px;
+            }
+
+            .btn-confirm {
+
+            }
+        }        
+    }
+}
+
+
+/*********************************
+* BACK TO TOP  
+**********************************/
+
+#backToTop {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 30px;
+    bottom:30px;
+    text-align: center;
+    background-color: rgba($main_color, 0.5);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    color: $pure_white;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    z-index: 4;
+
+    &:hover {
+        background-color: rgba($main_color, 1);
+    }
+
+    &.show {
+        opacity: 1;
+        filter: alpha(opacity=1);
+    } 
+
+    i {
+        vertical-align: -13px;
+        font-size: 22px;
+    }
+}
+
+.under-construction {
+    display: table;
+    text-align: center;
+    height: calc(100vh - 119px);
+
+    .centered {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}

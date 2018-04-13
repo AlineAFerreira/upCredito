@@ -1,0 +1,99 @@
+/*===========================================*/
+/* This is the file with footer style
+/* Theme Author: Aline Ferreira
+/* Version: 1.0
+==============================================*/
+
+#tf-footer {
+	/*background-color: #eeeeee;*/
+	background-color: #2f2f2f;
+
+	.quick-menu {
+		padding: 20px 15px;
+	}
+
+	.box-img {
+		display: inline-block;
+		margin-right: 35px;
+
+		img {
+			vertical-align: -10px;
+		}
+
+	}
+
+	.title-column {
+		font-size: 14px;
+		color: $pure_white;
+		text-transform: uppercase;
+
+		&:after {
+		    content: "";
+		    display: block;
+		    width: 34px;
+		    height: 1px;
+		    margin-top: 8px;
+		    background-color: #F0242C;
+		}
+	}
+	
+	address {
+		color: #B1B1B1;
+	}
+
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+
+		li {
+
+			&:before {
+				content: "\f105";
+				font-family: 'FontAwesome';
+				margin-right: 5px;
+			}
+
+			.link-footer {
+				display: inline-block;
+				color: #B1B1B1;
+				padding: 3px 0;
+				transition: all .5s;
+				-moz-transition: all .5s;
+				-webkit-transition: all .5s;
+				-ms-transition: all .5s;
+				-o-transition: all .5s;
+
+				&:hover {
+					padding-left: 6px;
+				}
+			}
+		}
+	}
+
+	.social {
+		margin-top: 20px;
+		display: inline-block;
+
+		a {
+			display: inline-block;
+			width: 32px;
+			height: 32px;
+			border: 1px solid #B1B1B1;
+			margin: 0 3px;
+			color: #B1B1B1;
+			font-size: 16px;
+			text-align: center;
+			line-height: 32px;
+
+			&:hover, &:focus, &:visited {
+				text-decoration: none;
+				opacity: .7;
+			}
+		}
+	}
+
+	.copyright {
+		background-color: #242424;
+		padding: 10px;
+	}
+}

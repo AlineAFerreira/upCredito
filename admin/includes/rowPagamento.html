@@ -1,0 +1,38 @@
+<div class="rowPagamento row">
+    <div class="form-group col-xs-12 col-sm-6 col-md-2">
+        <label class="control-label">Periodicidade: </label>
+        <select class="form-control" name="tipo[]" onchange="checkPeriodicidade(this)">
+            <option value="">Selecione...</option>
+            <option value="1">Sinal</option>
+            <option value="2">Á Vista</option>
+            <option value="3">Mensais</option>
+            <option value="4">Semestrais</option>
+            <option value="5">Anual</option>
+        </select>
+    </div>
+    <div class="form-group col-xs-12 col-sm-6 col-md-2">
+        <label class="control-label">Data:</label>
+        <input type="text" class="form-control date" placeholder="DD/MM/AAAA" name="data[]">
+    </div>
+
+    <div class="form-group col-xs-12 col-sm-6 col-md-2">
+        <label class="control-label">Qtd Parcelas: </label>
+        <input type="text" name="qtdParc[]" class="form-control number input-qtd" onkeyup="calculate(this)">
+    </div>
+
+    <div class="form-group col-xs-12 col-sm-6 col-md-3">
+        <label class="control-label">Valor: </label>
+        <input type="text" name="valor[]" class="form-control money input-valor" placeholder="R$" onkeyup="calculate(this)">
+    </div>
+
+    <div class="form-group col-xs-12 col-sm-6 col-md-3">
+        <label class="control-label">Valor Total da Série: </label>
+        <input type="text" name="totalSerie[]" class="form-control money input-total" placeholder="R$" disabled>
+    </div>
+
+    <span class="btn-trash" onclick="deleteLine(this)">
+        <i class=" fa fa-trash"></i>
+        <span class="hidden-md hidden-lg"> Remover </span>
+    </span>
+
+</div>

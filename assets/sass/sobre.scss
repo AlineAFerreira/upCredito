@@ -1,0 +1,64 @@
+/*===========================================*/
+/* This is the file with about page style
+/* Theme Author: Aline Ferreira
+/* Version: 1.0
+==============================================*/
+
+//Color Schema
+@import 'color';
+
+//Fonts
+@import 'fonts';
+
+// Pre-sets
+@import 'main';
+
+//Header
+@import 'header';
+
+#solec-about,
+#metacons-about {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+
+    .heading {
+        padding-top: 0;
+    }
+}
+
+@mixin about-mixin() {
+    background: url('../img/casacontainer3.jpg') no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-filter: brightness(50%);
+    filter: brightness(50%);
+    height: 250px;    
+}
+
+#solec-about {    
+    .about-right {
+        @include about-mixin();
+        
+        @media (max-width: 991px) {
+            margin-top: 20px;
+        }
+    }
+}
+
+#metacons-about {
+    background-color: $lighter_gray;
+
+    .about-left {
+        @include about-mixin();
+
+        @media (max-width: 991px) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+//Footer
+@import 'footer';
+

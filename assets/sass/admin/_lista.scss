@@ -1,0 +1,131 @@
+/*
+Author: Aline Ferreira
+14.Aug.2017
+*/
+
+.lista {
+    display: table;
+    width: 100%;
+
+    .options {
+        text-align: center;
+        padding: 0;
+        margin-bottom: 20px;
+
+        .box-action {
+            a {
+                padding: 4px 10px;
+                display: inline-block;
+                color: $medium_gray;
+                border: 1px solid $medium_gray;
+                border-radius: 3px;
+                text-align: center;
+                margin: 0 2.5px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                -ms-border-radius: 3px;
+                -o-border-radius: 3px;
+
+                &.active, &:hover {
+                    &.btn-lido {
+                        color: #23527c;
+                    }
+
+                    &.btn-reply {
+                        color: #2ad050;
+                    }
+                
+                    &.btn-fav {
+                        color: #D9D900;
+                    }
+
+                    &.btn-spam {
+                        color: #a94442;
+                    }
+
+                    &.btn-delete {
+                        color: $alert-red;
+                    }
+
+                }   
+
+                i {
+                    font-size: 20px;
+
+                    &.only {
+                        margin-right: 10px;
+                    }
+                } 
+            }
+        }
+    }
+
+    .table {
+        tr {
+            &.unread {
+                a.item {
+                    font-weight: bold;
+                }
+            }
+
+            .icon-fav {
+                display: none;
+            }
+
+            &.fav {
+                .icon-fav {
+                    display: block;
+                }
+            }
+
+            a.item {
+                &:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+
+                .icon-fav {
+                    color: #D9D900;
+                }
+            }
+        }
+        .box-action {
+            text-align: center;
+            width: 180px;
+
+            a {
+                font-size: 20px;
+                padding: 0 5px;
+                color: $medium_gray;
+
+                &.active, &:hover {
+                    &.btn-lido,
+                    &.btn-edit,
+                    &.btn-download {
+                        color: #23527c;
+                    }
+
+                    &.btn-reply {
+                        color: #2ad050;
+                    }
+                
+                    &.btn-fav {
+                        color: #D9D900;
+                    }
+
+                    &.btn-spam {
+                        color: #a94442;
+                    }
+
+                    &.btn-delete {
+                        color: $alert-red;
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+
+

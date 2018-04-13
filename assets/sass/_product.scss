@@ -1,0 +1,114 @@
+/*===========================================*/
+/* This is the file with product style
+/* Theme Author: Aline Ferreira
+/* Version: 1.0
+==============================================*/
+
+
+#produtos {
+    padding: 60px 0;
+
+    .header-prods {
+        margin-bottom: 20px;
+
+        h2 {
+            text-align: center;
+
+            a {
+                font-size: 25px;
+                margin-top: 30px;
+                margin-bottom: 0;
+                padding-bottom: 4px;
+                letter-spacing: -1px;
+                font-weight: 900;
+                color: $space_gray;
+                
+
+                &:hover, &:focus {
+                    text-decoration: none;
+                }                
+            }
+        }
+
+        span {
+            display: block;
+            width: 34px;
+            height: 1px;
+            margin: 0 auto;
+            background-color: $main_color;
+        }
+    }
+
+    .box-prod {         
+        position: relative;
+        margin-bottom: 20px;
+
+        a {
+            color: $text_color;
+
+            figure {
+                overflow: hidden;
+                position: relative;
+                height: 200px;
+
+                img {
+                    -webkit-transition: all 0.2s ease-in-out;
+                    -moz-transition: all 0.2s ease-in-out;
+                    -ms-transition: all 0.2s ease-in-out;
+                    -o-transition: all 0.2s ease-in-out;
+                    transition: all 0.2s ease-in-out;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .box-prod_body {
+                padding: 15px;
+                position: relative;
+                min-height: 140px;
+
+                p {
+                    line-height: 1.6;                    
+                }
+            }
+        }
+
+        &:hover, &:focus {
+            cursor: pointer;
+
+            img {
+                -moz-transform: scale(1.2);
+                -webkit-transform: scale(1.2);
+                -o-transform: scale(1.2);
+                -ms-transform: scale(1.2);
+                transform: scale(1.2);
+
+                -webkit-transition: all 0.2s ease-in-out;
+                -moz-transition: all 0.2s ease-in-out;
+                -ms-transition: all 0.2s ease-in-out;
+                -o-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }        
+    }
+
+    .vejaMais {
+        width: 100px;
+        height: 32px;
+        display: block;
+        line-height: 32px;  
+        color: $pure_white;
+        text-align: center;
+        background: $main_color;
+
+        &:hover {
+            text-decoration: none;
+            opacity: .9;
+        }
+    }
+}

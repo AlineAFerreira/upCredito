@@ -1,0 +1,209 @@
+/*===========================================*/
+/* This is the file with header style
+/* Theme Author: Aline Ferreira
+/* Version: 1.0
+==============================================*/
+
+
+#headerBar {
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    top: 0px;
+    box-shadow: 0px 7px 16px 0px rgba(50, 50, 50, 0.1);
+
+    &.cbp-af-header-shrink {
+        opacity: 0.95;
+
+        .top {
+
+            @media (min-width: 768px) {
+                height: 45px;
+            }
+
+            .left-side .logo {
+                width: 100px;
+            }
+        }
+    }
+
+    .top {
+        height: 80px;
+        background: #2f2f2f;
+        display: flex;
+        align-items: center;
+        transition: height 0.9s ease-out; 
+        -webkit-transition: height 0.9s ease-out; 
+        -moz-transition: height 0.9s ease-out; 
+        -ms-transition: height 0.9s ease-out; 
+        -o-transition: height 0.9s ease-out; 
+
+        @media (max-width: 767px) {
+            height: 55px;
+        }
+        
+
+        .left-side {
+            .logo {
+                width: 210px;
+                transition: width 1s;
+                -moz-transition: width 1s;
+                -webkit-transition: width 1s;
+
+                @media (max-width: 767px) {
+                    width: 100px;
+                }
+            }
+        }
+
+        .right-side {
+            transition: opacity 1s;
+            -moz-transition: opacity 1s;
+            -webkit-transition: opacity 1s;
+            -ms-transition: opacity 1s;
+            -o-transition: opacity 1s;
+
+
+        }
+    }
+
+    .navigation {
+
+        .navbar-header {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            .navbar-toggle {
+                padding: 9px 10px;
+                margin-top: 0; 
+                margin-right: 0;
+                margin-bottom: 0;
+
+                span.label-menu {
+                    display: inline-block;
+                    margin-top: 5px;
+                    /*text-transform: uppercase;*/
+                    font-weight: bold;
+                }
+
+                .icon-bar {
+                    background: $pure_black;
+                }
+            }        
+        }
+
+        .navbar-collapse.in {
+            height: calc(100vh - 55px);
+
+            &::-webkit-scrollbar-track{
+                -webkit-box-shadow: inset 0 0 6px fade($pure_black, 30%);
+                background-color: #333;
+            }
+
+            &::-webkit-scrollbar {
+                width: 6px;
+                background-color: #f5f5f5;
+            }
+
+            &::-webkit-scrollbar-thumb {        
+                -webkit-box-shadow: inset 0 0 6px fade($pure_black, 30%);
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                border-radius: 2px;
+                background-color: #111;
+            }
+        }
+
+        ul.navbar {
+            margin-bottom: 0;
+            text-align: center;
+            min-height: 0;
+
+            @media(max-width: 767px) {
+                text-align: left;
+                padding: 8px 0;
+            }
+
+            li {
+                display: inline-block;
+                border-left: 2px solid #CCC;
+
+                &.first {
+                    border-left: none;
+                }
+
+                @media(max-width: 767px) {
+                    display: inline;
+                }
+
+                &.active {
+                    color: $lighter_gray !important;
+                    border-bottom: 2px solid #2f2f2f;
+                }
+
+                &.sobre {
+                    cursor: default;
+                    &:hover .sub-menu {
+                        display: block;
+                    }
+
+                    @media(max-width: 767px) {
+                        > a {
+                            display: none;
+                        }
+                    }
+                }
+
+                a {
+                    color: $pure_white;
+                    font-family: $snd-font;
+                    font-size: 12px;
+                    letter-spacing: 1px;
+                    text-decoration: none;
+                    z-index: 999;
+                    -webkit-transition: 0.3s;
+                    -moz-transition: 0.3s;
+                    transition: 0.3s;
+                    padding: 5px 18px;                  
+
+                    &:hover, &:focus {
+                        color: $medium_gray;
+                        background-color: transparent;
+                    }
+
+                    i {
+                        font-size: 19px;
+                        vertical-align: -2px;
+                        margin-right: 10px;
+                    }
+                } 
+
+                .sub-menu {                    
+                    position: absolute;
+                    padding-left: 0;
+                    min-width: 160px;
+                    border-top: 3px solid transparent;
+                    display: none;
+
+                    @media (max-width: 767px) {
+                        display: block;
+                        position: static;
+                    }
+
+                    li {
+                        background-color: lighten($pure_black, 15%);
+                        padding: 4px 0 6px;
+                        display: block;
+                        text-align: left;
+                        border-bottom: 2px solid $pure_black;
+
+                        @media (max-width: 767px) {
+                            background-color: transparent;
+                        }
+                    }
+                }              
+            }
+        }
+    }
+}

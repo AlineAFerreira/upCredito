@@ -1,0 +1,396 @@
+<div class="col-xs-12">
+
+    <div class="x_panel" style="">
+        <div class="x_title">
+            <h2>Características</h2>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content"> 
+            <div class="form-group col-xs-12 col-sm-6 col-md-8">
+                <label for="nome" class="control-label">Nome do Produto*: </label>
+                <input type="text" id="nome" name="nome" class="form-control">
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-4">
+                <label for="area" class="control-label">Área Útil*: </label>
+                <input type="text" id="area" name="area" class="form-control">
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-3">
+                <label for="quartos" class="control-label">Dormitórios*: </label>
+                <input type="text" id="quartos" name="quartos" class="form-control">
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-3">
+                <label for="salas" class="control-label">Salas*: </label>
+                <input type="text" id="salas" name="salas" class="form-control">
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-3">
+                <label for="banheiros" class="control-label">Banheiros*: </label>
+                <input type="text" id="banheiros" name="banheiros" class="form-control">
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-3">
+                <label for="suites" class="control-label">Suítes*: </label>
+                <input type="text" id="suites" name="suites" class="form-control">
+            </div>
+            <div class="form-group col-xs-12 col-md-4">
+                <label for="tipo" class="control-label">Tipo*: </label>
+                <select class="form-control" id="tipo" name="tipo">
+                    <option value="">Selecione...</option>
+                    <option value="1">Container</option>
+                    <option value="2">Pré-moldado</option>
+                </select>
+            </div>
+            <div class="form-group col-xs-12 col-md-4">
+                <label for="segmento" class="control-label">Segmento*: </label>
+                <select class="form-control" id="segmento" name="segmento">
+                    <option value="">Selecione...</option>
+                    <option value="1">Residencial</option>
+                    <option value="2">Comercial</option>
+                    <option value="2">Decorativo</option>
+                    <option value="2">industrial</option>
+                </select>
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-4">
+                <label for="valorTotal" class="control-label">Valor Total*: </label>
+                <input type="text" id="valorTotal" name="valorTotal" class="form-control money" placeholder="R$">
+            </div>
+            <div class="form-group col-xs-12">
+                <label for="descricao">Descrição*: </label>
+                <textarea id="descricao" rows="5" class="form-control" name="descricao"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="x_panel" style="">
+        <div class="x_title">
+            <h2>Upload de Imagens e Videos <small> Faça o upload de pelo menos uma foto</small></h2>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <section id="uploadImages" class="col-xs-12">   
+                <div class="container_upload">
+                    <div class="droppreview"></div>
+
+                    <input type="hidden" name="_token" value="">
+                    <ul id="sortable" class="ui-sortable">
+                        <input type="hidden" id="addressUpload" value="http://localhost:8090/bmape/public/proprietario/upload" class="ui-sortable-handle" style="">
+                        <li class="upload-box ui-sortable-handle">
+                            <p class="text">
+                                Clique aqui para selecionar imagens do produto
+                            </p>
+                            <div class="dropform dz-clickable" id="dropbox"></div>
+                        </li>                                       
+                    </ul>
+                </div>
+                <input type="text" id="imgDestaque" name="imgDestaque" value="" style="width:100%; visibility: hidden;">
+
+                <div class="videos-inputs top_space40">
+                    <div class="form-group line-video">                                       
+                    <div class="box-input-video first form-group col-xs-12 col-sm-8">
+                            <label class="control-label">Vídeo do produto:</label>
+                            <input type="url" name="video[]" class="form-control" placeholder="Insira aqui o link do vídeo...">
+                            <i class="fa fa-close text-alert remove-video hidden" onclick="removeInput(this)"></i>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <div class="col-sm-6 top_space30 bottom_space30">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-8">
+                                <button type="button" class="btn btn-info addVideo" onclick="duplicate();">
+                                    Adicionar mais videos &nbsp;
+                                    <span class="fa fa-plus"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1 hidden">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for=""></label>
+                            </div>
+                        </div>
+                        <button class="btn-solec danger removeVideo" onclick="removeVideo(event, $(this).parent().parent().parent())">
+                            <span class="fa fa-remove"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="clearfix" id="recebeVideos"></div>
+            </section>
+        </div>
+    </div>                                 
+
+    <div class="x_panel" style="">
+        <div class="x_title">
+            <h2>Acabamento Interno</h2>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="acab1" name="acabInterno">
+                            <label for="acab1"><span></span>Acabamento 1</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="acab2" name="acabInterno">
+                            <label for="acab2"><span></span>Acabamento 2</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="acab3" name="acabInterno">
+                            <label for="acab3"><span></span>Acabamento 3</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="acab4" name="acabInterno">
+                            <label for="acab4"><span></span>Acabamento 4</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="x_panel" style="">
+        <div class="x_title">
+            <h2>Acabamento Externo</h2>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="acab5" name="acabExterno">
+                            <label for="acab5"><span></span>Acabamento 1</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="acab6" name="acabExterno">
+                            <label for="acab6"><span></span>Acabamento 2</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="acab7" name="acabExterno">
+                            <label for="acab7"><span></span>Acabamento 3</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="acab8" name="acabExterno">
+                            <label for="acab8"><span></span>Acabamento 4</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="x_panel" style="">
+        <div class="x_title">
+            <h2>Móveis da Sala</h2>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="moveisSala1" name="moveisSala">
+                            <label for="moveisSala1"><span></span>Móvel 1</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="moveisSala2" name="moveisSala">
+                            <label for="moveisSala2"><span></span>Móvel 2</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="moveisSala3" name="moveisSala">
+                            <label for="moveisSala3"><span></span>Móvel 3</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="moveisSala4" name="moveisSala">
+                            <label for="moveisSala4"><span></span>Móvel 4</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="x_panel" style="">
+        <div class="x_title">
+            <h2>Móveis do Banheiro</h2>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="moveisBanheiro1" name="moveisBanheiro">
+                            <label for="moveisBanheiro1"><span></span>Acabamento 1</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="moveisBanheiro2" name="moveisBanheiro">
+                            <label for="moveisBanheiro2"><span></span>Acabamento 2</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="moveisBanheiro3" name="moveisBanheiro">
+                            <label for="moveisBanheiro3"><span></span>Acabamento 3</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="moveisBanheiro4" name="moveisBanheiro">
+                            <label for="moveisBanheiro4"><span></span>Acabamento 4</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="x_panel" style="">
+        <div class="x_title">
+            <h2>Móveis da Cozinha</h2>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="moveisCozinha1" name="moveisCozinha">
+                            <label for="moveisCozinha1"><span></span>Móvel 1</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="moveisCozinha2" name="moveisCozinha">
+                            <label for="moveisCozinha2"><span></span>Móvel 2</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="moveisCozinha3" name="moveisCozinha">
+                            <label for="moveisCozinha3"><span></span>Móvel 3</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="moveisCozinha4" name="moveisCozinha">
+                            <label for="moveisCozinha4"><span></span>Móvel 4</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="x_panel" style="">
+        <div class="x_title">
+            <h2>Móveis do Quarto</h2>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="moveisQuarto1" name="moveisQuarto">
+                            <label for="moveisQuarto1"><span></span>Móvel 1</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="moveisQuarto2" name="moveisQuarto">
+                            <label for="moveisQuarto2"><span></span>Móvel 2</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="moveisQuarto3" name="moveisQuarto">
+                            <label for="moveisQuarto3"><span></span>Móvel 3</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="check-solec">
+                            <input type="checkbox" id="moveisQuarto4" name="moveisQuarto">
+                            <label for="moveisQuarto4"><span></span>Móvel 4</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="x_panel" style="">
+        <div class="x_title">
+            <h2>Condições de compra</h2>
+            <button type="button" class="btn btn-success pull-right" onclick="maisPagamentos()">Novo Pagamento</button>
+            <div class="clearfix"></div>
+        </div>
+        <div id="listaPag" class="x_content">
+            <div class="rowPagamento">
+                <div class="form-group col-xs-12 col-md-6 col-md-3">
+                    <label class="control-label">Periodicidade: </label>
+                    <select class="form-control" name="tipo[]">
+                        <option value="">Selecione...</option>
+                        <option value="1">Sinal</option>
+                        <option value="2">Á Vista</option>
+                        <option value="3">Mensais</option>
+                        <option value="4">Semestrais</option>
+                        <option value="5">Anual</option>
+                        <option value="6">Financiamento</option>
+                    </select>
+                </div>
+                <div class="form-group col-xs-12 col-sm-6 col-md-3">
+                    <label class="control-label">Data:</label>
+                    <input type="text" class="form-control date" placeholder="DD/MM/AAAA" name="data[]">
+                </div>
+
+                <div class="form-group col-xs-12 col-sm-6 col-md-2">
+                    <label class="control-label">Qtd Parcelas: </label>
+                    <input type="text" name="qtdParc[]" class="form-control">
+                </div>
+
+                <div class="form-group col-xs-12 col-sm-6 col-md-3">
+                    <label class="control-label">Valor: </label>
+                    <input type="text" name="valor[]" class="form-control money" placeholder="R$">
+                </div>
+                <div class="form-group col-xs-12 col-sm-6 col-md-1">
+                    <span class="btn-trash" onclick="deleteLine(this)">
+                        <i class=" fa fa-trash"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-12 top_space20">
+        <small>(*) Campos obrigatórios </small><br>
+    </div>
+    <div class="col-xs-12 top_space20">
+        <a href="index.html" class="btn btn-default">Cancelar</a>
+        <!-- To do Exibir apenas na edição -->
+        <a class="btn btn-danger hidden" data-toggle="modal" data-target="#deleteModal">Excluir</a>
+        <button type="submit" class="btn btn-success">Enviar</button>
+    </div>
+</div>

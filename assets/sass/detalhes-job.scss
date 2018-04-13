@@ -1,0 +1,187 @@
+/*
+Author: Aline Ferreira
+14.Aug.2017
+*/
+
+//Color Schema
+@import 'color';
+
+//Fonts
+@import 'fonts';
+
+// Pre-sets
+@import 'main';
+
+//Header
+@import 'header';
+
+#trabalhe-conosco {
+
+	.heading {
+		margin: 50px 0 30px;
+
+		@media (max-width: 767px) {
+			margin-top: 80px;
+		}
+
+		h1 {
+			.code {
+		    	font-size: 12px;
+		    	color: $medium_gray;
+		    	font-style: italic;
+		    }	
+		}
+	}
+
+	.form-col {
+		.text {
+			margin-bottom: 20px;
+		}
+
+		#formCurriculo {
+			label {
+				margin-top: 10px;
+				display: block;
+			}
+
+			.btn-upload {
+				color: $text_color;
+				display: inline-block;
+				border: 1px solid $medium_gray;
+				padding: 8px 20px;
+				margin: 10px 0;
+				cursor: pointer;
+
+				border-radius: 5px;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				-ms-border-radius: 5px;
+				-o-border-radius: 5px;
+
+				transition: all .5s;
+				-webkit-transition: all .5s;
+				-ms-transition: all .5s;
+				-moz-transition: all .5s;
+				-o-transition: all .5s;
+
+				&:hover {
+					color: $pure_white;
+					background-color: $text_color;
+					text-decoration: none;
+				}
+			}
+
+			input[type=file] {
+				display: none;
+			}
+			
+			#btn-enviar {
+				display: block;
+				margin: 20px 0 25px;
+				background-color: $main_color;
+				border-color: $main_color;
+
+				&:hover {
+					background-color: lighten($main_color, 14%);;
+				}
+			}
+		}
+	}
+
+	.job-box {
+		position: relative;
+		margin-bottom: 25px;
+	    /*-webkit-box-shadow: 4px 8px 25px rgba(0, 1, 180, 0.15);
+	    -moz-box-shadow: 4px 8px 25px rgba(0, 1, 180, 0.15);
+	    box-shadow: 4px 8px 25px rgba(0, 1, 180, 0.15);*/
+	    border: 1px solid #DDD;
+	    padding: 10px 20px;
+	    border-radius: 4px;
+	    -webkit-border-radius: 4px;
+	    -moz-border-radius: 4px;
+	    -o-border-radius: 4px;
+	    -ms-border-radius: 4px;
+
+		.panel-heading {
+			background-color: transparent;
+		}
+
+		.heading2 {
+		    color: $text_color;
+		    margin-top: 10px;
+		    font-weight: bold;
+		    text-transform: uppercase;
+		    font-size: 13px;
+		    display: block;
+		    margin: 40px 0 10px;
+
+		    @media (max-width: 767px) {
+		    	float: none;
+		    }
+
+			.pcd {
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				margin-right: 10px;
+				font-size: 18px;
+				color: $pure_white;
+				background: #003F87;
+				padding-left: 4px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				-ms-border-radius: 50%;
+				-o-border-radius: 50%;
+			}		    		    
+		}
+
+		.item-topico {
+			padding-bottom: 5px;
+
+			&:before {
+				content: "\f00c";
+				color: $main_color;
+				font-family: 'FontAwesome';
+				margin-right: 5px;
+			}
+		}
+
+		.obs {
+			font-size: 12px;
+			color: $medium_gray;
+			display: block;
+			clear: both;
+		}		
+
+		.header-vaga {
+			h2 {
+				font-size: 24px;
+			    padding-bottom: 10px;
+			    text-align: center;
+			    position: relative;
+			    letter-spacing: -1px;
+			    font-weight: bold;
+			    margin-top: 30px;
+			    margin-bottom: 0;
+		    }
+		    span {
+		    	display: block;
+			    width: 34px;
+			    height: 1px;
+			    background-color: $main_color;
+			    margin: auto;
+		    }
+		}		
+
+		.job-desc {
+
+		}
+	}
+}
+
+//Footer
+@import 'footer';
+
+

@@ -1,0 +1,250 @@
+/*
+Author: Aline Ferreira
+14.Aug.2017
+*/
+
+//Color Schema
+@import 'color';
+
+//Fonts
+@import 'fonts';
+
+// Presets
+@import 'mainAdmin';
+
+// General
+@import 'custom';
+
+// Zone upload
+@import 'zone';
+
+
+#uploadImages {
+
+	.container_upload { 		
+		overflow-y: hidden;
+		padding: 0 15px;
+	}
+
+	#sortable {
+		list-style-type: none;
+		padding-left: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		li.ui-state-default {
+			width: 230px;
+			background: $lighter_gray;
+			box-shadow: 0 0 2px rgba($pure_black, 0.3);
+			padding: 10px;
+			margin: 10px 15px 10px 0;
+			position: relative;
+			
+			.remove-img {
+				width: 30px;
+			    height: 30px;
+			    line-height: 30px;
+			    text-align: center;
+			    background-color: rgba($pure_black, 0.5);
+			    color: $pure_white;
+			    cursor: pointer;
+				position: absolute;
+			    right: -10px;
+			    top: -10px;			    			    
+			    z-index: 2;
+			    -webkit-border-radius: 50%;
+			    -moz-border-radius: 50%;
+			    -o-border-radius: 50%;
+			    -ms-border-radius: 50%;
+			    border-radius: 50%;
+			    transition: background-color 1s;
+			    -moz-transition: background-color 1s;
+			    -ms-transition: background-color 1s;
+			    -o-transition: background-color 1s;
+			    -webkit-transition: background-color 1s;
+
+			    &:hover{
+			    	background-color: rgba($alert_red, 60.6);
+			    }
+			}
+
+			.box_image {
+				overflow: hidden;
+				width: 100%;
+				height: 140px;
+				position: relative;
+
+				&:hover .overlay{
+					opacity: 1;
+				}
+
+				img {
+					width: auto;
+					height: 100%;
+					display: block;
+					margin: 0 auto;			
+				}
+
+				.overlay {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					font-size: 40px;
+					cursor: pointer;
+					color: $pure_white;
+					background-color: rgba($alert_red, 0.65);
+					-webkit-transition: all .5s;
+					-moz-transition: all .5s;
+					-o-transition: all .5s;
+					-ms-transition: all .5s;
+	    			transition: all .5s;
+	    			opacity: 0;
+	    			display: flex;
+					justify-content: center;
+					align-items: center;					
+				}
+			}
+
+			.box_opt {
+				font-size: 11px !important;
+				display: flex;
+
+				label {
+					flex-grow: 1;
+
+					input[type=checkbox], 
+					input[type=radio] {
+						display: none;
+
+						&:checked + span {
+						   background-color: $main_color;
+						}
+					}
+
+					span {
+						width: 10px;
+					    height: 10px;
+					    display: inline-block;
+					    margin-right: 5px;
+					    border: 1px solid $space_gray;
+					    -webkit-border-radius: 3px;
+					    -moz-border-radius: 3px;
+					    border-radius: 3px;
+					}
+				}
+			}
+
+			textarea.desc_img {
+				width: 100%;
+				height: 50px !important;
+				overflow: hidden;
+				border: 1px solid $main_color;
+				padding: 2px 10px;
+				margin-top: 10px;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+
+				&:focus{
+					border: 1px solid $main_color;
+					outline: none;
+				}
+			}
+		}
+	}
+
+	.upload-box {
+	    width: 230px;
+		position: relative;
+		border: 2px dashed darken($space_gray, 10%);
+		cursor: pointer;
+		margin: 10px 0px 10px;
+		min-height: 298px;
+		display: flex;
+		align-items: center;
+
+		.icon{
+			display: block;
+			height: 60px;
+			width: 60px;
+			border-radius: 50%;
+			background: #fff;
+			color: $main_color;
+			margin: auto;
+			text-align: center;
+			line-height: 60px;
+			font-size: 30px;
+			position: relative;
+			margin-bottom: 20px;
+			margin-top: 86px;
+			top: 10px;
+		}
+
+		.text{
+			padding: 5px 20px;
+			text-align: center;
+			font-family: 'Open sans', sans-serif;
+			font-weight: 300;
+			font-size: 16px;
+		}
+
+		#dropbox {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+		}
+	}
+
+	.videos-inputs {
+
+		.box-input-video {
+			position: relative;
+			margin-bottom: 10px;
+
+			.remove-video {
+				position: absolute;
+				right: 20px;
+    			top: 10px;
+				cursor: pointer;
+
+				&:hover {
+					color: rgba($alert_red, 0.7);
+				}
+			}
+		}
+	}
+}
+
+
+.rowPagamento {
+	display: table;
+	width: 100%;
+	margin-top: 15px;
+
+	&:first-child {
+		.btn-trash {
+			display: none;
+		}
+	}
+
+	.btn-trash {
+		position: absolute;
+		right: -3px;
+		display: inline-block;
+		margin-top: 26px;
+		cursor: pointer;
+		font-size: 20px;
+
+		@media(max-width: 991px) {
+			
+		}
+	}
+}
+
+
+
+
+

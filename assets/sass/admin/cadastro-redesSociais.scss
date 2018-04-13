@@ -1,0 +1,26 @@
+/*
+Author: Aline Ferreira
+14.Aug.2017
+*/
+
+//Color Schema
+@import 'color';
+
+//Fonts
+@import 'fonts';
+
+// Presets
+@import 'mainAdmin';
+
+// General
+@import 'custom';
+
+#redesSociais {
+	.float-btn {
+		margin-top: 24px;
+	}
+
+	.alert-success, .alert-danger {
+		display: none;
+	}
+}

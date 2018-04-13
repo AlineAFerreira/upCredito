@@ -1,0 +1,49 @@
+
+    <input type="hidden" id="tipoCadastro" name="tipoCadastro" value="2">
+    <div class="col-xs-12 col-md-8">
+        <div class="form-group col-xs-12">
+            <label class="control-label">Produto*: </label>
+            <select class="form-control" name="produto" required>
+                <option value="">Selecione...</option>
+                <option value="1">Opção one</option>
+                <option value="2">Opção two</option>
+                <option value="3">Opção three</option>
+                <option value="4">Opção four</option>
+            </select>
+        </div>
+        <div class="form-group col-xs-12 col-md-6">
+            <label class="control-label">Ordem: </label>
+            <select class="form-control" name="ordem" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+        <div class="form-group col-xs-12">
+            <label for="descricao">Descrição*: </label>
+            <textarea id="descricao" rows="5" required="required" class="form-control" name="descricao"></textarea>
+        </div>
+        <div class="clearfix"></div>
+        <div id="uploadImages" class="container_upload">
+            <div class="droppreview"></div>
+            <ul id="sortable">
+                <input type="hidden" id="addressUpload" value="{{ url('/proprietario/upload') }}">                                       
+                <li class="upload-box">
+                    <p class="text">
+                        Clique aqui para selecionar a imagem do destaque.
+                    </p>
+                    <div class="dropform" id="dropbox"></div>
+                </li> 
+                                                     
+            </ul>
+        </div>
+         <input type="text" id="imgDestaque" name="imgDestaque" value="" style="width:100%; visibility: hidden;">
+
+        <div class="top_space20">
+            <small>(*) Campos obrigatórios </small><br>
+        </div>
+
+        <a href="index.html" class="btn btn-default">Cancelar</a>
+        <!-- To do Exibir apenas na edição -->
+        <a class="btn btn-danger hidden" data-toggle="modal" data-target="#deleteModal">Excluir</a>
+        <button type="submit" class="btn btn-success">Enviar</button>
+    </div>                        

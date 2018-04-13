@@ -1,0 +1,72 @@
+/*
+Author: Aline Ferreira
+14.Aug.2017
+*/
+
+//Color Schema
+@import 'color';
+
+//Fonts
+@import 'fonts';
+
+// Presets
+@import 'mainAdmin';
+
+// General
+@import 'custom';
+
+// Listagem
+@import 'lista';
+
+
+#emailModal {
+    input:disabled, textarea:disabled {
+        cursor: default;
+    }
+
+    .box-action {
+        text-align: center;
+        margin: 10px;
+
+        a {
+            font-size: 20px;
+            padding: 5px 10px;
+            color: $medium_gray;
+            border: 1px solid $medium_gray;
+            border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            -o-border-radius: 3px;
+
+            &.active, &:hover {
+                &.btn-lido {
+                    color: #23527c;
+                }
+
+                &.btn-reply {
+                    color: #2ad050;
+                }
+            
+                &.btn-fav {
+                    color: #D9D900;
+                }
+
+                &.btn-spam {
+                    color: #a94442;
+                }
+
+                &.btn-delete {
+                    color: $alert-red;
+                }
+
+            }
+
+        }
+    }  
+    #replyEmail {
+        display: none;
+    }
+}
+
+

@@ -1,0 +1,111 @@
+/*===========================================*/
+/* This is the file with carousel style
+/* Theme Author: Aline Ferreira
+/* Version: 1.0
+==============================================*/
+
+
+#carousel-solec {
+    height: 400px;
+    background-color: $carousel_back;
+    position: relative;
+
+    @media(max-width: 767px) {
+        height: 250px;
+        margin-top: 55px;
+    }
+
+    .carousel-indicators {
+        z-index: 2;
+    }
+
+    .carousel-inner {
+        .item {
+            img {
+                width: auto;
+                height: 400px;
+                object-fit: cover;
+                margin: 0 auto;
+
+                @media(max-width: 767px) {
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+    a.carousel-control{
+        background-image: none;
+        span{color: $main_color;}
+    }
+
+    .contact-fixed {
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        z-index: 2;
+
+        @media(max-width: 767px) {
+            display: none;
+        }
+
+/*        &.affix {
+            position: fixed !important;
+            top: 100px;
+        }*/
+
+        .box {
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -o-border-radius: 5px;
+            -ms-border-radius: 5px;
+            overflow: hidden;
+
+            .top {
+                background: $lighter_gray;
+                color: $space_gray;
+                padding: 10px 10px 5px;
+
+                .right {
+                    i {
+                        display: inline-block;
+                        margin-right: 6px;
+                    }
+                }
+            }
+
+            .bottom {
+                background: $main_color;
+                color: $pure_white;
+                display: flex;
+                align-items: center;
+                padding: 8px 10px;
+                font-size: 13px;
+
+                .bottom_left {                
+                    float: left;
+                    max-width: 60px;
+                    margin-right: 15px;                
+                }
+                .bottom_right {
+                    float: left;
+
+                    a {
+                        display: inline-block;
+                        text-align: center;
+                        padding: 0 6px;
+                        color: $pure_white;
+
+                        i {
+                            display: block;
+                            font-size: 22px;
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+
+        }        
+    }
+}

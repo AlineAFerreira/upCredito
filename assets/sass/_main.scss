@@ -1,0 +1,276 @@
+
+
+
+// This is the Main Stylesheet
+// Theme Author: Aline Ferreira
+// Version: 1.0
+
+//CSS Style Structure
+
+// General
+// Helper Classes
+// Page title 
+
+
+/*********************************
+* General 
+**********************************/
+
+html{ 
+    background-color: $pure_white;
+}
+
+body {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: $main_font;
+    color: $text_color;
+    background-color: $pure_white;
+    /*padding-top: 78px;*/
+    font-size: 15px;
+
+    @media(min-width: 768px) {
+        padding-top: 80px; 
+    }
+}
+
+@media (min-width: 1200px) { 
+    .container { 
+        width: 1200px;
+    }
+}
+
+
+/*********************************
+* HELPER CLASSES 
+**********************************/
+
+.pointer {
+    cursor: pointer;
+}
+
+.ellipsis {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   -ms-text-overflow: ellipsis;
+   white-space: nowrap;
+   cursor: default;
+}
+
+.text-alert {
+    color: $alert-red;
+}
+
+.block {
+    display: block;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.top_space10 {
+    margin-top: 10px !important;
+}
+
+.top_space15 {
+    margin-top: 15px !important;
+}
+
+.top_space20 {
+    margin-top: 20px !important;
+}
+
+.top_space30 {
+    margin-top: 30px !important;
+}
+
+.top_space40 {
+    margin-top: 40px !important;
+}
+
+.bottom_space20 {
+    margin-bottom: 20px !important;
+}
+
+.bottom_space30 {
+    margin-bottom: 30px !important;
+}
+
+.padding_bottom10 {
+    padding-bottom: 10px;
+}
+
+.btn-dark {
+    color: $pure_white;
+    background-color: darken($space_gray, 20%);
+    border-color: $pure_black;
+
+    &:hover, &:focus {
+        color: $pure_white;
+        opacity: .8;
+    }
+}
+
+/*** Msg error JQuery Validation ***/
+
+label[id$="-error"] {
+    color: $alert_red;
+    font-size: 13px;
+}
+
+/*********************************
+* PAGE TITLE HEADERS
+**********************************/
+
+.heading, .heading2 {
+    span {
+        font-weight: bold;
+        font-size: 13px;
+        font-family: $snd_font;
+        display: block;
+        color: rgba($main_color, .7);
+        text-transform: uppercase;
+        letter-spacing: -0.2px;
+    }
+
+    h1 {        
+        font-size: 30px;
+        text-transform: uppercase;        
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    h1, h2 {
+        margin-top: 0;
+        padding-bottom: 10px;
+        position: relative;
+        letter-spacing: -1px;
+        font-weight: 900;
+        color: $space_gray;        
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 34px;
+            height: 1px;
+            left: 0;
+            bottom: 0;
+            background-color: $main_color;
+        }
+    }
+    
+}
+
+.box-shadow {
+    border: 1px solid #D4DEE5;
+    box-shadow: 0 0 6px 2px rgba(#D4DEE5, 0.4);
+}
+
+
+/*********************************
+* BACK TO TOP  
+**********************************/
+
+#backToTop {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 30px;
+    bottom:30px;
+    text-align: center;
+    background-color: rgba($main_color, 0.5);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    color: $pure_white;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    z-index: 4;
+
+    &:hover {
+        background-color: rgba($main_color, 1);
+    }
+
+    &.show {
+        opacity: 1;
+        filter: alpha(opacity=1);
+    } 
+
+    i {
+        vertical-align: -13px;
+        font-size: 22px;
+    }
+}
+
+/*********************************
+* PÁGINA EM CONSTRUÇÃO 
+**********************************/
+
+.under-construction {
+    display: table;
+    text-align: center;
+    height: calc(100vh - 119px);
+
+    .centered {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+/*********************************
+* CONTATO VERTICAL 
+**********************************/
+
+.contact-vertical {
+    position: fixed;
+    width: 190px;
+    right: -144px;
+    top: 40%;
+    z-index: 3;
+    transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+
+    &:hover {
+        right: 0px;
+    }   
+
+    .box {
+        background-color: $main_color;
+        padding: 0 10px;
+        color: $pure_white;
+        border-radius: 6px;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -o-border-radius: 6px;
+        -ms-border-radius: 6px;
+
+        h6 {
+            text-align: center;
+        }
+
+        .line {
+            margin: 15px 0;
+
+            a {
+                color: $pure_white;               
+            }
+
+
+            i {
+                font-size: 25px;
+                display: inline-block;
+                margin-right: 15px;
+            }             
+        }
+    }
+}
